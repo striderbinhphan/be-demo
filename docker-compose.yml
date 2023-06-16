@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+  fixtures_assignment_db:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_PASSWORD=Abcd1234
+      - MYSQL_USER=assignment_db
+      - MYSQL_DATABASE=api_fixture
+    ports:
+      - '3308:3306'
+    networks:
+      - assignment_local
+    volumes:
+      - assignment_db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  fixtures_assignment_test_db:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_PASSWORD=Abcd1234
+      - MYSQL_USER=assignment_db
+      - MYSQL_DATABASE=api_fixture
+    ports:
+      - '3309:3306'
+    networks:
+      - assignment_local
+    volumes:
+      - assignment_test_db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  fixture-listing:
+    container_name: fixture-listing
+    build: .
+    volumes:
+      - .:/data/www/fixture-listing/node_modules
+    depends_on:
+      - fixtures_assignment_db    
+    networks:
+      - assignment_local
+    ports:
+      - 10014:3000
+    environment:      
+      NODE_ENV: docker
+      DB_HOST: fixtures_assignment_db
+      DB_PORT: 3306
+      DB_USER: assignment_db
+      DB_PASSWORD: Abcd1234
+      DB_DATABASE: api_fixture
+volumes:
+  assignment_db:
+    driver: local
+  assignment_test_db:
+    driver: local
+networks:
+  assignment_local:

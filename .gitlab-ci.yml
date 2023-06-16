@@ -1,0 +1,41 @@
+stages:
+- deployment
+- alert_webhook
+
+deployment:
+  stage: deployment
+  environment:
+    name: develop
+  only:
+  - develop
+  script:
+  - echo ${CI_PROJECT_DIR}
+  # - cat docker-compose.yml
+  - chmod +x build.sh
+  - ./build.sh &
+  tags:
+  - "solidbytes-prod"
+# alert_webhook:alert:
+#   stage: alert_webhook
+#   environment:
+#     name: develop
+#   only:
+#   - develop
+#   script:
+#   - python devops/alert.py
+#   when: on_success
+#   tags:
+#   - "solidbytes"
+
+# alert_webhook:alert:
+#   stage: alert_webhook
+#   environment:
+#     name: develop
+#   only:
+#   - develop
+#   script:
+#   - python devops/alert.py
+#   when: on_failure
+#   tags:
+#   - "solidbytes"
+

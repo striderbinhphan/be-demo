@@ -1,0 +1,26 @@
+# Test config
+service:
+  name: api-fixture
+  description:
+  baseUrl: api/fixture
+  docsBaseUrl: docs/fixture
+  apiVersion: 0.1.0
+  appVersion: 0.1.0
+
+server:
+  host: 127.0.0.1
+  port: 3007
+  hostname: 127.0.0.1:3007
+  swaggerSchema: http
+
+typeorm:
+  type: mysql
+  host: localhost
+  username: assignment_db
+  password: Abcd1234
+  port: 3309
+  database: api_fixture
+  entities: []
+  synchronize: true
+  autoLoadEntities: true
+  logging: false

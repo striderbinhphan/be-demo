@@ -1,0 +1,47 @@
+[
+    {
+        "uuid": "1",
+        "shortName": "Chelsea",
+        "name": "Chelsea Football Club",
+        "description": "Chelsea Football Club is an English professional football club based in Fulham, West London. Founded in 1905, they play their home games at Stamford Bridge.[5] The club competes in the Premier League, the top division of English football. They won their first major honour, the League championship, in 1955. The club won the FA Cup for the first time in 1970, their first European honour, the Cup Winners' Cup, in 1971, and became the third English club to win the Club World Cup in 2022.",
+        "celebratedDate": "1905-03-10",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/360px-Chelsea_FC.svg.png",
+        "type": "football"
+    },
+    {
+        "uuid": "2",
+        "shortName": "Manchester United",
+        "name": "Manchester United Football Club",
+        "description": "Manchester United Football Club, commonly referred to as Man United (often stylised as Man Utd), or simply United, is a professional football club based in Old Trafford, Greater Manchester, England. The club competes in the Premier League, the top division in the English football league system. Nicknamed the Red Devils, it was founded as Newton Heath LYR Football Club in 1878, but changed its name to Manchester United in 1902. The club moved from Newton Heath to its current stadium, Old Trafford, in 1910.",
+        "celebratedDate": "1902",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/380px-Manchester_United_FC_crest.svg.png",
+        "type": "football"
+    },
+    {
+        "uuid": "3",
+        "shortName": "Manchester City",
+        "name": "Manchester City Football Club",
+        "description": "",
+        "celebratedDate": "1887",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/360px-Manchester_City_FC_badge.svg.png",
+        "type": "football"
+    },
+    {
+        "uuid": "4",
+        "shortName": "Arsenal",
+        "name": "Arsenal Football Club",
+        "description": "",
+        "celebratedDate": "October 1886",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/340px-Arsenal_FC.svg.png",
+        "type": "football"
+    },
+    {
+        "uuid": "5",
+        "shortName": "Liverpool",
+        "name": "Liverpool Football Club",
+        "description": "",
+        "celebratedDate": "1892-6-3",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/360px-Liverpool_FC.svg.png",
+        "type": "football"
+    }
+]
