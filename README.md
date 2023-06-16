@@ -1,27 +1,18 @@
-# Fixture Listing 
+# Demo be app
 
-![Context](images/background.png)
+![Context]
 You have been tasked to build APIs to support our frontend (web & mobile) teams for the sections circled (in red) in the image above.
 These sections are known as the Fixtures module, and we will need APIs to support Fixtures Listing and Fixtures Calendar to display
 only dates with matches.
 
 **🚨🚨🚨 Please note: This is not a production-ready application**
 ## Getting Started
-###  Architecture
-
-![Architecture](images/architecture.jpg)
-
-
-###  Database structure
-
-![Database](images/database.jpg)
 
 **Technical Stack**
 
     - NestJs / TypeORM
-    - NextJS
     - MySQL
-    - Jest / Cypress
+    - Jest
     - Additional: Husky / Pretty
 ### Prerequisites
 
@@ -45,7 +36,7 @@ What things you need to install
         - Database: api_fixture
         - Username: assignment_db
         - Password: Abcd1234
-        Credential above is default. 
+        Credential above is default.
         You can revise it in config directory (config/default.yaml)
     3. Install dependencies: `yarn`
     4. Start service at port 3007: `yarn start:dev`
@@ -73,7 +64,7 @@ You can also use my temporary site at fixtures.jobfi.vn
 
 ## What next
 - Master/Slave database
-- Add caching 
+- Add caching
 - Optimize Docker build
 - Improve logging
 - etc..
